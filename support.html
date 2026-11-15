@@ -56,6 +56,51 @@
     footer a { margin: 0 10px; color: var(--neutral-500); }
     footer a:hover { color: var(--neutral-900); }
   </style>
+<style>
+    /* Mobile-only note beside Mac App Store buttons. Hidden on desktop. */
+    .mac-app-cta { display: contents; }
+    .mac-app-note { display: none; }
+    @media (max-width: 768px) {
+      nav.topbar .inner { flex-wrap: wrap; }
+      nav.topbar .links {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        row-gap: 8px;
+        column-gap: 12px;
+      }
+      .mac-app-note {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 36em;
+        margin: 8px 0 0;
+        padding: 10px 12px;
+        border: 1px solid var(--neutral-200);
+        border-radius: 8px;
+        background: var(--neutral-100);
+        color: var(--neutral-700);
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1.45;
+        text-align: left;
+      }
+      .mac-app-note a {
+        font-weight: 700;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+      nav.topbar .mac-app-note {
+        flex: 1 0 100%;
+        max-width: none;
+        margin: 8px 0 0;
+        order: 2;
+      }
+      .cta-row .mac-app-note {
+        flex: 1 0 100%;
+        max-width: 36em;
+      }
+    }
+</style>
 </head>
 <body>
   <nav class="topbar">
@@ -71,6 +116,7 @@
         <a href="/privacy.html">Privacy</a>
         <a href="https://apps.apple.com/us/app/lectern-ai/id6761786041?mt=12&amp;ct=EXP-20260903-LECTERN-SITE-01" class="cta">Get the app</a>
       </div>
+      <span class="mac-app-note">This is a Mac app. Open this page on your Mac to download. <a href="mailto:?subject=Lectern%20AI%20%E2%80%94%20Mac%20App%20Store%20link&amp;body=This%20is%20a%20Mac%20app%2E%20Open%20this%20link%20on%20your%20Mac%20to%20download%3A%0A%0Ahttps%3A%2F%2Fapps%2Eapple%2Ecom%2Fus%2Fapp%2Flectern-ai%2Fid6761786041%3Fmt%3D12%26ct%3DEXP-20260903-LECTERN-SITE-01">Email me the link</a></span>
     </div>
   </nav>
   <main>
@@ -79,7 +125,7 @@
     <p class="lead">Email <a href="mailto:iantrimble@remnantsecurity.com">iantrimble@remnantsecurity.com</a> for Lectern AI support. Include your macOS version and a short description of the issue.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="mailto:iantrimble@remnantsecurity.com">Email support</a>
-      <a class="btn btn-secondary" href="https://apps.apple.com/us/app/lectern-ai/id6761786041?mt=12&amp;ct=EXP-20260903-LECTERN-SITE-01">Mac App Store</a>
+      <span class="mac-app-cta"><a class="btn btn-secondary" href="https://apps.apple.com/us/app/lectern-ai/id6761786041?mt=12&amp;ct=EXP-20260903-LECTERN-SITE-01">Mac App Store</a><span class="mac-app-note">This is a Mac app. Open this page on your Mac to download. <a href="mailto:?subject=Lectern%20AI%20%E2%80%94%20Mac%20App%20Store%20link&amp;body=This%20is%20a%20Mac%20app%2E%20Open%20this%20link%20on%20your%20Mac%20to%20download%3A%0A%0Ahttps%3A%2F%2Fapps%2Eapple%2Ecom%2Fus%2Fapp%2Flectern-ai%2Fid6761786041%3Fmt%3D12%26ct%3DEXP-20260903-LECTERN-SITE-01">Email me the link</a></span></span>
     </div>
     <div class="grid">
       <article class="card">
